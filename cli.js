@@ -3,7 +3,7 @@ import unpin from "./index.js";
 
 try {
 	console.log(await unpin());
-} catch {
-	console.error("Error: Next or React version not found");
+} catch (error) {
+	console.error(error.toString());
 	process.exitCode = 1;
 }
