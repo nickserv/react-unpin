@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		// Type Checking
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+
+		// Modules
+		"module": "NodeNext",
+
+		// Emit
+		"declaration": true,
+		"declarationMap": true,
+		"outDir": "dist",
+		"sourceMap": true,
+
+		// JavaScript Support
+		"checkJs": true,
+		"noUncheckedIndexedAccess": true,
+
+		// Interop Constraints
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		// Completeness
+		"skipLibCheck": true
+	}
+}

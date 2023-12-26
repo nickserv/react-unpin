@@ -4,15 +4,24 @@
 	"version": "1.0.0",
 	"license": "ISC",
 	"author": "Nick McCurdy <nick@nickmccurdy.com> (https://nickmccurdy.com/)",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"bin": {
-		"unpin": "cli.js"
+		"unpin": "dist/cli.js"
+	},
+	"scripts": {
+		"prepare": "tsc && chmod +x dist/cli.js",
+		"start": "tsc && node dist/cli.js"
 	},
 	"dependencies": {
 		"octokit": "^3.1.2"
 	},
 	"devDependencies": {
+		"@types/node": "^18.19.3",
+		"@types/pacote": "^11.1.8",
 		"prettier": "^3.0.0",
-		"prettier-config-a11y": "^1.1.2"
+		"prettier-config-a11y": "^1.1.2",
+		"typescript": "^5.3.3"
 	},
 	"prettier": "prettier-config-a11y"
 }
