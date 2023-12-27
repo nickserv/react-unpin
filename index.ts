@@ -1,15 +1,17 @@
 import { components } from "@octokit/openapi-types";
 import { OctokitResponse } from "@octokit/types";
+import { findUp } from "find-up";
 import { readFile } from "fs/promises";
 import { Octokit } from "octokit";
 import { Manifest } from "pacote";
-import { join } from "path";
 
-async function nextVersion(path: string = ".") {
+async function nextVersion(path?: string) {
 	try {
-		const manifestPath = join(path, "node_modules/next/package.json");
+		const manifestPath = await findUp("node_modules/next/package.json", {
+			cwd: path,
+		});
 		const manifest: Manifest = JSON.parse(
-			await readFile(manifestPath, { encoding: "utf8" }),
+			await readFile(manifestPath!, { encoding: "utf8" }),
 		);
 		return manifest.version;
 	} catch {
@@ -31,7 +33,7 @@ async function nextManifest(version?: string): Promise<Manifest> {
 	}
 }
 
-export default async function reactVersion(path: string = ".") {
+export default async function reactVersion(path?: string) {
 	const next = await nextVersion(path);
 	const react = (await nextManifest(next)).devDependencies?.["react-builtin"];
 	if (react) return react.substring(react.indexOf("@") + 1);
