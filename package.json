@@ -14,7 +14,7 @@
 		"start": "tsc && node dist/cli.js"
 	},
 	"dependencies": {
-		"find-up": "^7.0.0",
+		"find-up-simple": "^1.0.0",
 		"octokit": "^3.1.2"
 	},
 	"devDependencies": {

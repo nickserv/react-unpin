@@ -1,6 +1,6 @@
 import { components } from "@octokit/openapi-types";
 import { OctokitResponse } from "@octokit/types";
-import { findUp } from "find-up";
+import { findUp } from "find-up-simple";
 import { readFile } from "fs/promises";
 import { Octokit } from "octokit";
 import { Manifest } from "pacote";
