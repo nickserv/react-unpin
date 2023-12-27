@@ -3,11 +3,13 @@ import { OctokitResponse } from "@octokit/types";
 import { readFile } from "fs/promises";
 import { Octokit } from "octokit";
 import { Manifest } from "pacote";
+import { join } from "path";
 
-async function nextVersion() {
+async function nextVersion(path: string = ".") {
 	try {
+		const manifestPath = join(path, "node_modules/next/package.json");
 		const manifest: Manifest = JSON.parse(
-			await readFile("node_modules/next/package.json", { encoding: "utf8" }),
+			await readFile(manifestPath, { encoding: "utf8" }),
 		);
 		return manifest.version;
 	} catch {
@@ -15,13 +17,13 @@ async function nextVersion() {
 	}
 }
 
-async function nextManifest(version: string): Promise<Manifest> {
+async function nextManifest(version?: string): Promise<Manifest> {
 	try {
 		const response = (await new Octokit().rest.repos.getContent({
 			owner: "vercel",
 			repo: "next.js",
 			path: "package.json",
-			ref: `v${version}`,
+			ref: version ? `v${version}` : undefined,
 		})) as OctokitResponse<components["schemas"]["content-file"]>;
 		return JSON.parse(atob(response.data.content));
 	} catch {
@@ -29,8 +31,8 @@ async function nextManifest(version: string): Promise<Manifest> {
 	}
 }
 
-export default async function reactVersion() {
-	const next = await nextVersion();
+export default async function reactVersion(path: string = ".") {
+	const next = await nextVersion(path);
 	const react = (await nextManifest(next)).devDependencies?.["react-builtin"];
 	if (react) return react.substring(react.indexOf("@") + 1);
 	else throw new Error(`React not pinned in Next ${next}`);
