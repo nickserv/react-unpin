@@ -5,7 +5,7 @@ import { readFile } from "fs/promises";
 import { Octokit } from "octokit";
 import { Manifest } from "pacote";
 
-async function nextVersion(path?: string) {
+export async function nextVersion(path?: string) {
 	try {
 		const manifestPath = await findUp("node_modules/next/package.json", {
 			cwd: path,
@@ -19,7 +19,7 @@ async function nextVersion(path?: string) {
 	}
 }
 
-async function nextManifest(version?: string): Promise<Manifest> {
+export async function nextManifest(version?: string): Promise<Manifest> {
 	try {
 		const response = (await new Octokit().rest.repos.getContent({
 			owner: "vercel",
