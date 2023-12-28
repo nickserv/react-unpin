@@ -2,6 +2,7 @@
 	"type": "module",
 	"name": "react-unpin",
 	"version": "1.0.0",
+	"description": "Unpin your framework's React version to install it locally",
 	"license": "ISC",
 	"author": "Nick McCurdy <nick@nickmccurdy.com> (https://nickmccurdy.com/)",
 	"exports": "./dist/index.js",
