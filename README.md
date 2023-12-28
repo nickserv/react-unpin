@@ -4,6 +4,8 @@
 
 This helps to avoid breaking changes between [React Canaries](https://react.dev/community/versioning-policy#canary-channel) used by your framework and other tools, such as when using Server Components in tests, docs, or monorepo packages.
 
+## [API Docs](https://tsdocs.dev/docs/react-unpin)
+
 ## Usage
 
 ```
@@ -53,8 +55,6 @@ pnpm add react-unpin
 ```
 bun add react-unpin
 ```
-
-### [API Docs](https://tsdocs.dev/docs/react-unpin)
 
 ## Caveats
 
