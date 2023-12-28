@@ -3,14 +3,29 @@
 	"name": "react-unpin",
 	"version": "1.0.0",
 	"description": "Unpin your framework's React version to install it locally",
+	"keywords": [
+		"cli",
+		"dependencies",
+		"diagnostics",
+		"info",
+		"next",
+		"node",
+		"react",
+		"rsc",
+		"server-rendering",
+		"utility",
+		"version"
+	],
 	"license": "ISC",
 	"author": "Nick McCurdy <nick@nickmccurdy.com> (https://nickmccurdy.com/)",
+	"funding": "https://github.com/sponsors/nickmccurdy",
 	"exports": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"bin": {
 		"react-unpin": "dist/cli.js",
 		"unpin": "dist/cli.js"
 	},
+	"repository": "nickmccurdy/react-unpin",
 	"scripts": {
 		"prepare": "tsc && chmod +x dist/cli.js",
 		"start": "tsc && node dist/cli.js"
@@ -28,6 +43,7 @@
 	},
 	"cspell": {
 		"words": [
+			"nickmccurdy",
 			"pacote"
 		],
 		"useGitignore": true
