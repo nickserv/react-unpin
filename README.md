@@ -54,6 +54,8 @@ pnpm add react-unpin
 bun add react-unpin
 ```
 
+### [API Docs](https://tsdocs.dev/docs/react-unpin)
+
 ## Caveats
 
 - Only Next app router is supported currently since Next has the strongest support for Server Components and its pages router doesn't pin React. https://github.com/nickmccurdy/react-unpin/issues/9 https://github.com/nickmccurdy/react-unpin/issues/10
