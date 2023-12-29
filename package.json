@@ -16,6 +16,7 @@
 		"utility",
 		"version"
 	],
+	"homepage": "https://tsdocs.dev/docs/react-unpin",
 	"license": "ISC",
 	"author": "Nick McCurdy <nick@nickmccurdy.com> (https://nickmccurdy.com/)",
 	"funding": "https://github.com/sponsors/nickmccurdy",
