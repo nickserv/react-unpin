@@ -58,6 +58,6 @@ bun add react-unpin
 
 ## Caveats
 
-- Only Next app router is supported currently since Next has the strongest support for Server Components and its pages router doesn't pin React. https://github.com/nickmccurdy/react-unpin/issues/9 https://github.com/nickmccurdy/react-unpin/issues/10
-- A `node_modules` directory is required to resolve local Next installations, therefore Yarn PnP is unsupported. https://github.com/nickmccurdy/react-unpin/issues/2
-- Internet access is required to read Next's source code since its package manifests exclude pinned React versions. https://github.com/nickmccurdy/react-unpin/issues/11
+- Only Next app router is supported currently since Next has the strongest support for Server Components and its pages router doesn't pin React. [#9](https://github.com/nickmccurdy/react-unpin/issues/9) [#10](https://github.com/nickmccurdy/react-unpin/issues/10)
+- A `node_modules` directory is required to resolve local Next installations, therefore Yarn PnP is unsupported. [#2](https://github.com/nickmccurdy/react-unpin/issues/2)
+- Internet access is required to read Next's source code since its package manifests exclude pinned React versions. [#11](https://github.com/nickmccurdy/react-unpin/issues/11)
