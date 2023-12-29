@@ -31,12 +31,12 @@
 		"start": "tsc && node dist/cli.js"
 	},
 	"dependencies": {
+		"@types/pacote": "^11.1.8",
 		"find-up-simple": "^1.0.0",
 		"octokit": "^3.1.2"
 	},
 	"devDependencies": {
 		"@types/node": "^18.19.3",
-		"@types/pacote": "^11.1.8",
 		"prettier": "^3.0.0",
 		"prettier-config-a11y": "^1.1.2",
 		"typescript": "^5.3.3"
