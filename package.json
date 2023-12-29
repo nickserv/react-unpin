@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "react-unpin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Unpin your framework's React version to install it locally",
 	"keywords": [
 		"cli",
