@@ -34,7 +34,7 @@
 	"dependencies": {
 		"@types/pacote": "^11.1.8",
 		"find-up-simple": "^1.0.0",
-		"octokit": "^3.1.2"
+		"octokit": "^2.1.0"
 	},
 	"devDependencies": {
 		"prettier": "^3.0.0",
