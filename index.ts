@@ -20,13 +20,17 @@ export async function nextVersion(path?: string) {
 }
 
 export async function nextManifest(version?: string): Promise<Manifest> {
-	const response = (await new Octokit().rest.repos.getContent({
-		owner: "vercel",
-		repo: "next.js",
-		path: "package.json",
-		ref: version ? `v${version}` : undefined,
-	})) as OctokitResponse<components["schemas"]["content-file"]>;
-	return JSON.parse(atob(response.data.content));
+	try {
+		const response = (await new Octokit().rest.repos.getContent({
+			owner: "vercel",
+			repo: "next.js",
+			path: "package.json",
+			ref: version ? `v${version}` : undefined,
+		})) as OctokitResponse<components["schemas"]["content-file"]>;
+		return JSON.parse(atob(response.data.content));
+	} catch {
+		throw new Error("Next download from GitHub failed");
+	}
 }
 
 export default async function reactVersion(path?: string) {
