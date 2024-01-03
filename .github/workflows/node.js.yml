@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - if: matrix.node-version == '14.6.0'
-        run: npm install --global npm@9
+        run: npm install --global npm@7
       - run: npm ci
       - run: npm install next
       - run: npm start
