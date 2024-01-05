@@ -29,7 +29,7 @@
 	"repository": "nickmccurdy/react-unpin",
 	"scripts": {
 		"prepare": "tsc && chmod +x dist/cli.js",
-		"start": "tsc && node dist/cli.js"
+		"start": "tsimp cli.js"
 	},
 	"dependencies": {
 		"@types/pacote": "^11.1.8",
@@ -39,12 +39,14 @@
 	"devDependencies": {
 		"prettier": "^3.0.0",
 		"prettier-config-a11y": "^1.1.2",
+		"tsimp": "^2.0.10",
 		"typescript": "^5.3.3"
 	},
 	"cspell": {
 		"words": [
 			"nickmccurdy",
-			"pacote"
+			"pacote",
+			"tsimp"
 		],
 		"useGitignore": true
 	},
