@@ -29,7 +29,8 @@
 	"repository": "nickmccurdy/react-unpin",
 	"scripts": {
 		"prepare": "tsc && chmod +x dist/cli.js",
-		"start": "tsimp cli.js"
+		"start": "tsimp cli.js",
+		"test": "tsimp --test --experimental-test-coverage cli.js"
 	},
 	"dependencies": {
 		"@types/pacote": "^11.1.8",
@@ -37,6 +38,7 @@
 		"octokit": "^3.1.2"
 	},
 	"devDependencies": {
+		"next": "^14.0.4",
 		"prettier": "^3.0.0",
 		"prettier-config-a11y": "^1.1.2",
 		"tsimp": "^2.0.10",
