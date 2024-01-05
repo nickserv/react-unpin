@@ -30,7 +30,7 @@
 	"scripts": {
 		"prepare": "tsc && chmod +x dist/cli.js",
 		"start": "tsimp cli.js",
-		"test": "tsimp --test --experimental-test-coverage cli.js"
+		"test": "tsimp --test cli.js"
 	},
 	"dependencies": {
 		"@types/pacote": "^11.1.8",
