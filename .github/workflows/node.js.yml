@@ -3,7 +3,7 @@ name: Node.js CI
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -23,8 +23,23 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-      - run: npm ci
-      - run: npx prettier --check .
-      - uses: streetsidesoftware/cspell-action@v4
+      - uses: actions/cache@v3
+        with:
+          path: .tsimp
+          key: tsimp
+          enableCrossOsArchive: true
+      - run: npm ci --no-scripts
       - run: npm start
       - run: npm test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: npm
+      - run: npm ci --no-scripts
+      - run: npx prettier --check .
+      - uses: streetsidesoftware/cspell-action@v4
