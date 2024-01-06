@@ -27,7 +27,6 @@ jobs:
         with:
           path: .tsimp
           key: tsimp
-          enableCrossOsArchive: true
       - run: npm ci --no-scripts
       - run: npm start
       - run: npm test
