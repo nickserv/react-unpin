@@ -24,5 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
+      - run: npx prettier --check .
+      - uses: streetsidesoftware/cspell-action@v4
       - run: npm start
       - run: npm test
