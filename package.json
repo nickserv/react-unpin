@@ -40,7 +40,7 @@
 	"devDependencies": {
 		"next": "^14.0.4",
 		"prettier": "^3.0.0",
-		"prettier-config-a11y": "^1.1.2",
+		"prettier-config-a11y": "^2.0.0-alpha.3",
 		"tsimp": "^2.0.10",
 		"typescript": "^5.3.3"
 	},
