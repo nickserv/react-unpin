@@ -7,6 +7,13 @@ This helps to avoid breaking changes between
 used by your framework and other tools, such as when using Server Components in
 tests, docs, or monorepo packages.
 
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> This is unnecessary with newer versions of Next (since `14.3.0-canary.45` and
+> `15.0.0-rc.0`), which have started using `peerDependencies` to keep the React
+> version consistent.
+<!-- prettier-ignore-end -->
+
 ## [API Docs](https://tsdocs.dev/docs/react-unpin)
 
 ## Usage
@@ -22,7 +29,7 @@ react-unpin [path]
 By default, `unpin` and `react-unpin` will print the React version pinned in the
 current directory's package. You can optionally provide a single path to check a
 different directory's package. The React version pinned by Server Component
-frameworks typically starts with `18.3.0-canary-`.
+frameworks typically starts with `18.3.0-canary-` or `19.0.0-canary-`.
 
 ### Zero Install
 
