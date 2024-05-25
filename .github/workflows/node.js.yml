@@ -9,12 +9,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [18.3.0, 20, 21]
+        node-version: [18.3.0, 20, 21, 22]
         os: [ubuntu-latest]
         include:
-          - node-version: 21
+          - node-version: 22
             os: macos-latest
-          - node-version: 21
+          - node-version: 22
             os: windows-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 21
+          node-version: 22
           cache: npm
       - run: npm ci --no-scripts
       - run: npx prettier --check .
