@@ -30,7 +30,7 @@
 	"scripts": {
 		"prepack": "tsc && chmod +x dist/cli.js",
 		"start": "tsimp cli.js",
-		"test": "tsimp --test cli.js"
+		"test": "tsimp test.js"
 	},
 	"dependencies": {
 		"@types/pacote": "^11.1.8",
