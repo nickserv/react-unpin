@@ -11,5 +11,5 @@ test("nextManifest", async () => {
 });
 
 test("reactVersion", async () => {
-	assert.match(await reactVersion(), /^18.3.0-canary-/);
+	assert.match(await reactVersion(), /^18\.3\.0-canary-/);
 });
